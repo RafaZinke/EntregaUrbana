@@ -3,7 +3,7 @@
     Rafael Zink - https://github.com/RafaZinke/EntregaUrbana
     
 
-📋 Sobre o Projeto
+Sobre o Projeto
 
 Este sistema especialista utiliza programação lógica em Prolog para auxiliar empresas de entrega urbana a:
 
@@ -13,7 +13,7 @@ Este sistema especialista utiliza programação lógica em Prolog para auxiliar 
     Aplicar descontos por volume e taxas adicionais
     Explicar o raciocínio por trás das decisões
 
-🎯 Funcionalidades
+Funcionalidades
 
 O sistema considera os seguintes fatores:
 
@@ -25,7 +25,7 @@ O sistema considera os seguintes fatores:
     Fragilidade do produto
     Volume de entregas no mês (para desconto)
 
-🚀 Como Instalar
+Como Instalar
 Pré-requisitos
 
     SWI-Prolog instalado no sistema
@@ -88,7 +88,7 @@ swipl -s src/main.pl -g start
         Prazo estimado
         Explicação detalhada de como chegou ao resultado
 
-📊 Exemplos de Entrada e Saída
+Exemplos de Entrada e Saída
 Exemplo 1: Entrega Expressa no Centro
 
 Entrada:
@@ -150,7 +150,7 @@ Veiculo selecionado: carro
 Custo total: R$ 78.00
 Prazo estimado: 1 horas e 6 minutos
 
-🧠 Regras Implementadas
+ Regras Implementadas
 
 O sistema implementa 10 regras principais:
 
@@ -165,7 +165,7 @@ O sistema implementa 10 regras principais:
     Cálculo de prazo: Considera velocidade, distância, complexidade da zona e tempo de carga
     Validação de urgência: Verifica se o veículo atende o prazo solicitado
 
-📁 Estrutura dos Arquivos
+ Estrutura dos Arquivos
 
     main.pl: Menu principal e orquestração do sistema
     kb.pl: Base de conhecimento (fatos, tabelas, domínios)
@@ -173,19 +173,19 @@ O sistema implementa 10 regras principais:
     ui.pl: Interface de coleta de dados do usuário
     explain.pl: Explicação da trilha de decisões
 
-🔧 Tecnologias
+ Tecnologias
 
     SWI-Prolog: Interpretador Prolog utilizado
     Programação Lógica: Paradigma de resolução por inferência
 
-📝 Observações
+ Observações
 
     Valores padrão são aplicados em caso de entradas inválidas
     O sistema sempre explica como chegou aos resultados
     Todas as taxas e valores podem ser ajustados em kb.pl
     O sistema avisa quando o prazo não atende a urgência solicitada
 
-📞 Suporte
+ Suporte
 
 Para dúvidas ou problemas:
 
@@ -194,7 +194,7 @@ Para dúvidas ou problemas:
     Confira se todos os arquivos .pl estão na pasta src/
     Abra uma issue no repositório GitHub
 
-📄 Licença
+ Licença
 
 Este projeto foi desenvolvido para fins acadêmicos como trabalho da disciplina de Inteligência Artificial.
 
