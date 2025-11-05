@@ -10,11 +10,12 @@ start :-
 
 % Exibe o banner inicial do sistema
 banner :-
-  format("~n╔════════════════════════════════════════════════════════╗~n"),
-  format("║   Sistema Especialista - Entrega Urbana               ║~n"),
-  format("║   Calcula custo, prazo e melhor veículo para entrega  ║~n"),
-  format("╚════════════════════════════════════════════════════════╝~n"),
-  format("~nDesenvolvido por: [Seu Nome] (@seu-usuario-github)~n~n").
+  format("~n================================================~n"),
+  format("  Sistema Especialista - Entrega Urbana~n"),
+  format("  Calcula custo, prazo e melhor veiculo~n"),
+  format("================================================~n"),
+  format("~nDesenvolvido por: Rafael Zink~n"),
+  format("(https://github.com/RafaZinke/EntregaUrbana)~n~n").
 
 % Menu principal com opções
 menu :-
@@ -23,8 +24,18 @@ menu :-
   format("2) Sair~n"),
   format("====================================~n"),
   format("Escolha uma opcao: "),
-  read(Opcao),
+  get_opcao(Opcao),
   processar_opcao(Opcao).
+
+% Lê a opção do menu de forma mais robusta
+get_opcao(Opcao) :-
+  catch(
+    ( read_line_to_codes(user_input, Codes),
+      atom_codes(Atom, Codes),
+      atom_number(Atom, Opcao) ),
+    _,
+    Opcao = 0
+  ).
 
 % Processa a opção escolhida pelo usuário
 processar_opcao(1) :-
@@ -35,7 +46,7 @@ processar_opcao(1) :-
 
 processar_opcao(2) :-
   !,
-  format("~nEncerrando o sistema... Até logo!~n").
+  format("~nEncerrando o sistema... Ate logo!~n").
 
 processar_opcao(_) :-
   format("~nOpcao invalida! Tente novamente.~n"),
